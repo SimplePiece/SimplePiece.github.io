@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Airb;
+    src: url('../assets/fonts/AirbnbCereal-Bold.ttf');
+}
+
+@font-face {
+    font-family: AirbBlack;
+    src: url('../assets/fonts/AirbnbCereal-Black.ttf');
+}
+
+@font-face {
+    font-family: AirbLight;
+    src: url('../assets/fonts/AirbnbCereal-Light.ttf');
+}
+
+@font-face {
+    font-family: AirbBook;
+    src: url('../assets/fonts/AirbnbCereal-Book.ttf');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #0134db, #1e87ff);
+}
+
+@keyframes zoomVoltar {
+    0% {
+        transform: scale(0)
+    }
+    50% {
+        transform: scale(1.05)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes Suave {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    animation-duration: 1.3s;
+    animation-name: zoomVoltar;
+}
+
+.center {
+    top: 45%;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.text-principal {
+    color: #fff;
+    text-align: center;
+    animation-name: Suave;
+    animation-duration: 1s;
+    font-family: 'AirbBlack';
+}
+
+.text-secundario {
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: center;
+    animation-name: Suave;
+    animation-duration: 1s;
+    font-family: 'AirbBook';
+}
+
+.infos {
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 1.4;
+    animation-name: Suave;
+    animation-duration: 1s;
+    font-family: 'AirbLight';
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.btn-informacoes {
+    width: 320px;
+    height: 50px;
+    display: flex;
+    color: white;
+    margin: 0 auto;
+    font-size: 19px;
+    margin-top: 20px;
+    transition: 0.4s;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'Airb';
+    animation-name: Suave;
+    animation-duration: 1s;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.btn-informacoes:hover {
+    color: #1e87ff;
+    background: white;
+}
+
+.btn-informacoes:focus, .btn-informacoes:focus {
+    outline: none;
+}
+
+@media (max-width: 370px) {
+    .btn-informacoes {
+        width: 280px;
+    }
+}
