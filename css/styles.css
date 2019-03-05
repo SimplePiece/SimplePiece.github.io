@@ -111,7 +111,6 @@ body {
     margin: 0 auto;
     font-size: 19px;
     margin-top: 20px;
-    transition: 0.4s;
     align-items: center;
     border-radius: 25px;
     font-family: 'Airb';
@@ -122,7 +121,12 @@ body {
     border: 2px solid white;
 }
 
+.btn-animation {
+    transition: all 0.4s;
+}
+
 .btn-informacoes:hover {
+    transition: all 0.4s;
     color: #1e87ff;
     background: white;
 }
