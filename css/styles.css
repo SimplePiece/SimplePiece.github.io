@@ -238,7 +238,7 @@ body {
     }
 }
 
-.footer .sociais img {
+.icons {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 4px;
@@ -248,7 +248,7 @@ body {
     animation-duration: 0.5s;
 }
 
-.footer .sociais img:hover {
+.icons img:hover {
     opacity: 0.9;
 }
 
