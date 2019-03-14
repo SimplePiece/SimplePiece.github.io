@@ -88,6 +88,7 @@ function fechar() {
         document.getElementById('btn2').style.display = "flex";
         document.getElementById('loading').style.display = "none";
         document.getElementById('labelSucess').style.display = "none";
+        document.getElementById('btnResult').classList.remove("erro", "sucesso", "duplicado")
         cancel();
     }, 300);
 }
