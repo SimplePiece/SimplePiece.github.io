@@ -131,12 +131,172 @@ body {
     background: white;
 }
 
-.btn-informacoes:focus, .btn-informacoes:focus {
+.btn-informacoes:focus {
     outline: none;
+}
+
+.close:focus {
+    outline: none;
+}
+
+.modal-btn:focus {
+    outline: none;
+}
+
+.no-border {
+    border-top: none;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.modal-footer {
+    padding-top: 0;
+    padding-bottom: 24px;
+}
+
+.error-modal {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(187, 48, 48);
+    margin-bottom: 0px;
+    display: none;
+}
+
+.modal-btn {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    color: white;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'Airb';
+    animation-name: Suave;
+    animation-duration: 1s;
+    justify-content: center;
+    background: #1e87ff;
+    border: 2px solid white;
+}
+
+.input-modal {
+    font-family: 'AirbLight';
+    margin-top: 10px;
+    transition: 0.5s all;
+    color: #252525a3;
+}
+
+.sucesso {
+    width: 85%;
+    background: #00b10f;
+    animation-duration: 0.7s;
+    animation-name: zoomVoltar;
+}
+
+.duplicado {
+    width: 85%;
+    background: #1e87ff;
+    animation-duration: 0.7s;
+    animation-name: zoomVoltar;
+}
+
+.erro {
+    width: 85%;
+    background: #b10000;
+    animation-duration: 0.7s;
+    animation-name: zoomVoltar;
+}
+
+.sucess-label {
+    width: 100%;
+    display: none;
+}
+
+.btn-cancel {
+    background: #414141;
+}
+
+.modal-texto {
+    font-size: 20px;
+    color: #252525a3;
+    line-height: 1.4;
+    text-align: center;
+    animation-name: Suave;
+    animation-duration: 0.5s;
+    font-family: 'Airb';
 }
 
 @media (max-width: 370px) {
     .btn-informacoes {
         width: 280px;
+    }
+}
+
+.footer .sociais img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    width: 30px;
+    animation-name: Suave;
+    animation-duration: 0.5s;
+}
+
+.footer .sociais img:hover {
+    opacity: 0.9;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: none;
+    margin: auto !important;
+    margin-top: 20px !important;
+    animation-name: Suave;
+    animation-duration: 1s;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #0049B4;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
     }
 }

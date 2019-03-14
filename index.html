@@ -17,29 +17,72 @@
 
     <div class="center">
 
-        <img class="logo" src="./assets/images/simplepicao.png" />
+        <img class="logo" src="./assets/images/simplepice.png" />
         <h1 class="text-principal">EM BREVE! AGUARDE</h1>
         <p class="text-secundario"> Nosso site está em desenvolvimento.</p>
-        <button class="btn-informacoes">Fique por dentro!</button>
+        <button class="btn-informacoes" onclick="verificarStorage()" data-toggle="modal"
+            data-target="#exampleModalCenter">Fique por dentro!</button>
 
     </div>
 
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header no-border">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fechar()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-texto" id="exampleModalLongTitle">Digite seu email abaixo para podermos avisa-lo
+                        assim que o nosso serviço estiver disponivel.</h5>
+                    <input type="email" onkeyup="keyRelease()" class="form-control input-modal" id="inputEmail"
+                        placeholder="Digite seu email">
+                </div>
+                <div class="modal-footer no-border">
+
+                    <button type="button" id="btn1" class="modal-btn btn-cancel" data-dismiss="modal"
+                        onclick="cancel()">Cancelar</button>
+                    <button type="button" id="btn2" class="modal-btn" onclick="confirmar()">Confirmar</button>
+
+                    <div class="spinner" id="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>
+
+                    <div id="labelSucess" class="sucess-label">
+                        <button type="button" id="btnResult" class="modal-btn">Informação</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
+        <div class="sociais">
+
+            <a href="https://github.com/SimplePiece"><img src="./assets/images/git_white.png" alt="git-logo"></a>
+            <a href="https://www.instagram.com/simplepieceofc/"><img src="./assets/images/insta_white.png"
+                    alt="insta-logo"></a>
+
+        </div>
         <p class="infos">© 2019 Simple Piece</p>
     </div>
 
 </body>
 
-<script>
-
-    function ativarTransition() {
-        var btn = document.getElementsByClassName('btn-informacoes')[0];
-        btn.classList.add('btn-animation')
-    }
-
-    ativarTransition();
-
-</script>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/functions.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </html>
