@@ -36,7 +36,7 @@ function confirmar() {
 
         axios.post(API + "/email", { email })
             .then(function (response) {
-                if (!response.data.toString().includes("210")) {
+                if (!response.data.toString().includes("Error")) {
                     requisicaoSucess();
                 } else {
                     requisicaoDuplicated();
