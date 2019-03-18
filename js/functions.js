@@ -39,7 +39,7 @@ function confirmar() {
                 requisicaoSucess();
             })
             .catch(function (error) {
-                error.response.status === 302 ? requisicaoDuplicated() : requisicaoError();
+                error.response.status === 409 ? requisicaoDuplicated() : requisicaoError();
             });
 
     } else {
