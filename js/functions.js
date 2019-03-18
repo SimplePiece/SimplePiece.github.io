@@ -36,15 +36,10 @@ function confirmar() {
 
         axios.post(API + "/email", { email })
             .then(function (response) {
-                if (!response.data.toString().includes("Error")) {
-                    requisicaoSucess();
-                } else {
-                    requisicaoDuplicated();
-                }
+                requisicaoSucess();
             })
             .catch(function (error) {
-                console.log(error);
-                requisicaoError();
+                error.response.status === 302 ? requisicaoDuplicated() : requisicaoError();
             });
 
     } else {
