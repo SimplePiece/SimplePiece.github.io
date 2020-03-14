@@ -1,5 +1,7 @@
 const API = "https://api-postful.herokuapp.com";
 
+setAno();
+
 function verificarStorage() {
     if (sessionStorage.getItem("sp_requisitado")) {
         document.getElementById('btn1').style.display = "none";
@@ -14,8 +16,9 @@ function ativarTransition() {
     btn.classList.add('btn-animation')
 }
 
-function getAno(){
-    return new Date().getFullYear()
+function setAno() {
+    var ano = new Date().getFullYear()
+    document.getElementById('ano').innerHTML = `© ${ano} Simple Piece Company`;
 }
 
 ativarTransition();
