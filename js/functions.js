@@ -14,6 +14,10 @@ function ativarTransition() {
     btn.classList.add('btn-animation')
 }
 
+function getAno(){
+    return new Date().getFullYear()
+}
+
 ativarTransition();
 
 function confirmar() {
